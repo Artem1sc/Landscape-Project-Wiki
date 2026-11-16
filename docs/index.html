@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Landscape Wiki：全球景觀設計案例研究與知識整合，從空間、尺度、雨洪與生態策略探索景觀設計。" />
+  <title>Landscape Wiki — Global Landscape Architecture Atlas</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/data.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body data-page="home">
+  <header class="header" id="top">
+    <a href="index.html" class="brand" aria-label="Landscape Wiki 首頁"><span class="brand-mark">✳</span> LANDSCAPE <em>/</em> WIKI</a>
+    <nav aria-label="網站導覽"><a href="#projects">PROJECTS</a><a href="#strategies">STRATEGIES</a><a href="#about">ABOUT</a></nav>
+    <span class="header-index">AN OPEN LANDSCAPE ATLAS <span class="crossmark">+</span></span>
+  </header>
+  <main>
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">GLOBAL LANDSCAPE ARCHITECTURE ARCHIVE <span class="rule"></span> 001—004</p>
+        <h1>Landscape<br/><i>as</i> Research<span class="period">.</span></h1>
+        <p class="hero-zh">全球景觀設計案例研究與知識圖譜</p>
+        <p class="hero-description">從世界各地的景觀作品出發，閱讀基地、解構策略，探索空間如何回應城市、水文與生態。</p>
+        <a class="underlink" href="#projects">探索案例 <span aria-hidden="true">↗</span></a>
+        <div class="hero-stats" aria-label="知識庫統計">
+          <div><strong id="numCases">04</strong><span>CURATED PROJECTS</span></div>
+          <div><strong id="numStrategies">06</strong><span>DESIGN STRATEGIES</span></div>
+          <div><strong id="numSources">13</strong><span>RESEARCH SOURCES</span></div>
+        </div>
+      </div>
+      <div class="hero-art-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Singapore_Bishan_Park_Aerial.jpg/1200px-Singapore_Bishan_Park_Aerial.jpg" alt="碧山宏茂橋公園實際航拍照片，河道自然化與綠地系統" class="hero-art" referrerpolicy="no-referrer" />
+        <span class="diagram-label diagram-label-top">FIG. 01 / BISHAN–ANG MO KIO PARK</span>
+        <span class="diagram-label diagram-label-bottom">PHOTO · ATELIERDREISEITL · CC BY-SA 3.0</span>
+      </div>
+    </section>
+    <div class="separator"><span>01 / SELECTED WORKS</span><span>2026 LANDSCAPE RESEARCH COLLECTION</span></div>
+    <section class="projects section-shell" id="projects">
+      <div class="section-heading"><div><p class="eyebrow">COLLECTION / 001</p><h2>Selected <i>Works</i></h2></div><p>以專案為起點，從景觀形式追溯設計如何運作。<br/>可依尺度、類型與策略交叉檢索。</p></div>
+      <div class="filters" aria-label="案例搜尋與篩選">
+        <label class="field field-search"><span>SEARCH / 搜尋</span><input id="search" type="search" placeholder="專案名稱、城市、設計事務所…" autocomplete="off" /></label>
+        <label class="field"><span>TYPOLOGY / 類型</span><select id="filterType"><option value="">所有類型</option></select></label>
+        <label class="field"><span>SPATIAL SCALE / 空間尺度</span><select id="filterScale"><option value="">所有尺度</option></select></label>
+        <label class="field"><span>STRATEGY / 設計策略</span><select id="filterStrategy"><option value="">所有策略</option></select></label>
+        <label class="field"><span>AREA / 實際面積</span><select id="filterArea"><option value="">不限面積</option><option value="small">未滿 5 公頃</option><option value="medium">5–50 公頃</option><option value="large">超過 50 公頃</option><option value="unknown">尚未確認</option></select></label>
+        <button type="button" class="reset-button" id="resetFilters" aria-label="清除搜尋與篩選">重設 ↺</button>
+      </div>
+      <div class="results-bar"><span><b id="resultCount">04</b> PROJECTS FOUND</span><span class="desktop-only">分類為多標籤，面積不足不予推算</span></div>
+      <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden>沒有符合條件的案例。試著調整篩選條件。</div>
+    </section>
+    <div class="separator"><span>02 / STRATEGY INDEX</span><span>KNOWLEDGE BUILDS THROUGH CONNECTIONS</span></div>
+    <section class="strategies section-shell" id="strategies">
+      <div class="section-heading"><div><p class="eyebrow">RESEARCH / 002</p><h2>Design <i>Strategies</i></h2></div><p>不只儲存案例，而是讓案例之間的知識相互連結。<br/>從空間手法回到設計問題，對照不同解法。</p></div>
+      <div class="strategy-grid" id="strategyGrid"></div>
+    </section>
+    <section class="about section-shell" id="about">
+      <div class="about-heading"><p class="eyebrow">METHOD / 003</p><h2>A living<br/><i>research archive.</i></h2></div>
+      <div class="about-copy"><p>Landscape Wiki 是由 AI 輔助、經人工審核的景觀案例研究系統。每個案例以統一結構整理，所有重要事實保留原始來源，AI 的空間分析則明確標示。</p><p>內容不僅依照類型和尺度分類，也建立景觀策略之間的關聯。日後新增案例時，知識索引與策略頁能一併更新。</p><p class="footnote">封面使用可查核出處與授權的真實案例照片，每張均附作者、授權和來源連結。Enghaveparken 採改造前歷史照片，並提供改造後官方圖像連結。照片不等同基地配置圖。</p></div>
+    </section>
+  </main>
+  <footer class="footer"><a class="brand" href="#top">LANDSCAPE <em>/</em> WIKI</a><p>RESEARCHED, VERIFIED & HUMAN-REVIEWED.</p><span>© 2026 LANDSCAPE WIKI</span></footer>
+</body>
+</html>
